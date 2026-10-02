@@ -4,7 +4,7 @@ title: projects
 permalink: /projects/
 description: Research and selected coursework in robot learning, control and ML.
 nav: true
-nav_order: 3
+nav_order: 4
 display_categories: [research, coursework]
 horizontal: false
 ---

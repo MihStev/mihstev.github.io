@@ -448,3 +448,71 @@ footer.fixed-bottom {
 .projects a * {
   text-decoration: none !important;
 }
+
+// --- About: lead sentence, highlights, "more" link ---------------------------
+
+.lead-text {
+  font-family: var(--font-display);
+  font-size: 1.22rem;
+  line-height: 1.5;
+  font-weight: 500;
+  color: var(--global-text-color);
+  margin-bottom: 1.3rem;
+}
+
+.highlights {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.4rem;
+
+  li {
+    display: grid;
+    grid-template-columns: 7.2rem 1fr;
+    gap: 0.9rem;
+    padding: 0.55rem 0;
+    border-bottom: 1px dashed var(--global-divider-color);
+    line-height: 1.5;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .label {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    padding-top: 0.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .highlights li {
+    grid-template-columns: 1fr;
+    gap: 0.1rem;
+  }
+}
+
+a.more-link {
+  display: inline-block;
+  margin-top: 0.2rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--accent) !important;
+  text-decoration: none !important;
+  border-bottom: 1.5px solid var(--accent);
+  padding-bottom: 1px;
+}
+
+// --- Research page: plain-text section headings get the numbered style -------
+
+article > h2 {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}

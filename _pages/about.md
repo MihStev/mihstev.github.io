@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: MSc MVA student at <a href='https://www.ens-paris-saclay.fr/'>ENS Paris-Saclay</a> · Robot learning
+subtitle: MSc MVA student · <a href='https://www.ens-paris-saclay.fr/'>ENS Paris-Saclay</a> · Robot learning
 
 profile:
   align: right
@@ -16,19 +16,26 @@ social: true # includes social icons at the bottom of the page
 
 announcements:
   enabled: true # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
+  scrollable: false # adds a vertical scroll bar if there are more than 3 news items
+  limit: 3 # leave blank to include all the news in the `_news` folder
 
 latest_posts:
   enabled: false
 ---
 
-I'm a master's student in the [MVA program](https://www.master-mva.com/) (Mathématiques, Vision, Apprentissage) at ENS Paris-Saclay, supported by a **French Government Scholarship (BGF)**. I received my BSc in Electrical Engineering from the [University of Belgrade](https://www.etf.bg.ac.rs/en) (GPA 9.11/10), specializing in Signals and Systems.
-
-I work on **robot learning**. At the [ETF Robotics Laboratory](https://robot.etf.bg.ac.rs/en-gb/team/), advised by Prof. Kosta Jovanović, I developed imitation- and reinforcement-learning policies for fiber-optic cable insertion with a UR5e arm in NVIDIA Isaac Lab, as part of the [Intrinsic AI for Industry Challenge](https://www.intrinsic.ai/events/ai-for-industry-challenge). In my BSc thesis I trained ACT and Diffusion Policy on up to 30k simulated demonstrations: more data cut the lateral error 3.5×, but both policies plateaued at the same distance from the port, which points to the contact phase as the real bottleneck.
-
-I have also worked on model-based control (table-tennis ball juggling with a Franka Panda) and on world models (an action-conditioned video diffusion model for robot manipulation, built at [PSIML](https://psiml.pfe.rs/)).
-
-<ul class="chips"><li>imitation learning</li><li>reinforcement learning</li><li>world models</li><li>contact-rich manipulation</li><li>dynamic manipulation</li><li>trajectory optimization</li><li>model-based control</li><li>sim-to-real</li></ul>
-
 <div class="status-pill"><span class="dot"></span>Open to research internships · spring 2027 · <a href="mailto:mihajlo.stevanovi@ens-paris-saclay.fr">get in touch</a></div>
+
+<p class="lead-text">I'm interested in how robots can learn control from data rather than having it hand-tuned, through imitation and reinforcement learning, and world models that let them plan.</p>
+
+<ul class="highlights">
+  <li><span class="label">Now</span><span>MSc <a href="https://www.master-mva.com/">MVA</a>, ENS Paris-Saclay · French Government Scholar (BGF)</span></li>
+  <li><span class="label">Research</span><span>IL/RL policies for cable insertion in the <a href="{{ '/projects/2_aic/' | relative_url }}">Intrinsic AI for Industry Challenge</a>, ETF Robotics Lab</span></li>
+  <li><span class="label">Thesis</span><span><a href="{{ '/projects/1_il_limits/' | relative_url }}">ACT vs. Diffusion Policy on 30k demos</a>: more data cuts alignment error 3.5×, but not the contact-phase gap</span></li>
+  <li><span class="label">World models</span><span><a href="{{ '/projects/3_world_model/' | relative_url }}">Action-conditioned video diffusion</a> on BAIR robot data: 99.6% direction accuracy</span></li>
+  <li><span class="label">Control</span><span><a href="{{ '/projects/4_juggling/' | relative_url }}">Model-based table-tennis ball juggling</a> on a Franka Panda</span></li>
+  <li><span class="label">Background</span><span>BSc Electrical Engineering, University of Belgrade · GPA 9.11/10</span></li>
+</ul>
+
+<ul class="chips"><li>imitation learning</li><li>reinforcement learning</li><li>RL fine-tuning</li><li>world models</li><li>planning</li><li>contact-rich manipulation</li><li>sim-to-real</li></ul>
+
+<a class="more-link" href="{{ '/research/' | relative_url }}">More about my research →</a>
