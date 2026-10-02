@@ -1,7 +1,7 @@
 # this file contains the social media links and usernames of the author
 # the socials will be displayed in the order they are defined here
 # for more information, please refer to the documentation of jekyll-socials plugin: https://github.com/george-gca/jekyll-socials
-email: mihajlo.stevanovi@ens-paris-saclay.fr # your email address
+email: mihastevanovic04@gmail.com # your email address
 cv_pdf: /assets/pdf/Mihajlo_Stevanovic_CV.pdf # path to your CV PDF file
 github_username: MihStev # your GitHub user name
 linkedin_username: mihajlo-stevanovi%C4%87 # your LinkedIn user name

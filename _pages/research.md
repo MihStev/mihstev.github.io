@@ -51,4 +51,4 @@ Two directions interest me most right now.
 - **RL fine-tuning of imitation-learned policies.** My thesis showed that more demonstrations improve alignment but not the contact phase, which is exactly where interaction and reward should help.
 - **World models for planning.** At PSIML I saw that a video model can learn to respect robot actions. The next step is to use such a model to imagine outcomes and plan before acting.
 
-I'm looking for a **research internship starting in spring 2027** to work on these questions. Feel free to [reach out](mailto:mihajlo.stevanovi@ens-paris-saclay.fr).
+I'm looking for a **research internship starting in spring 2027** to work on these questions. Feel free to [reach out](mailto:mihastevanovic04@gmail.com).

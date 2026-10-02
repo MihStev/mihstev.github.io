@@ -23,7 +23,7 @@ latest_posts:
   enabled: false
 ---
 
-<div class="status-pill"><span class="dot"></span>Open to research internships · spring 2027 · <a href="mailto:mihajlo.stevanovi@ens-paris-saclay.fr">get in touch</a></div>
+<div class="status-pill"><span class="dot"></span>Open to research internships · spring 2027 · <a href="mailto:mihastevanovic04@gmail.com">get in touch</a></div>
 
 <p class="lead-text">I'm interested in how robots can learn control from data rather than having it hand-tuned, through imitation and reinforcement learning, and world models that let them plan.</p>
 
