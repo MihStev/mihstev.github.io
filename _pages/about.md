@@ -2,16 +2,14 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: MSc MVA student at <a href='https://www.ens-paris-saclay.fr/'>ENS Paris-Saclay</a> · Robot learning
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>Paris region, France</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -22,13 +20,15 @@ announcements:
   limit: 5 # leave blank to include all the news in the `_news` folder
 
 latest_posts:
-  enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+  enabled: false
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I'm a master's student in the [MVA program](https://www.master-mva.com/) (Mathématiques, Vision, Apprentissage) at ENS Paris-Saclay, supported by a **French Government Scholarship (BGF)**. I received my BSc in Electrical Engineering from the [University of Belgrade](https://www.etf.bg.ac.rs/en) (GPA 9.11/10), specializing in Signals and Systems.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+I work on **robot learning**. At the [ETF Robotics Laboratory](https://robot.etf.bg.ac.rs/en-gb/team/), advised by Prof. Kosta Jovanović, I developed imitation- and reinforcement-learning policies for fiber-optic cable insertion with a UR5e arm in NVIDIA Isaac Lab, as part of the [Intrinsic AI for Industry Challenge](https://www.intrinsic.ai/events/ai-for-industry-challenge). In my BSc thesis I trained ACT and Diffusion Policy on up to 30k simulated demonstrations: more data cut the lateral error 3.5×, but both policies plateaued at the same distance from the port, which points to the contact phase as the real bottleneck.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+I have also worked on model-based control (table-tennis ball juggling with a Franka Panda) and on world models (an action-conditioned video diffusion model for robot manipulation, built at [PSIML](https://psiml.pfe.rs/)).
+
+**Interests:** imitation and reinforcement learning · world models · contact-rich and dynamic manipulation · trajectory optimization and model-based control · sim-to-real transfer.
+
+I'm looking for a **research internship starting in spring 2027**. Feel free to [reach out](mailto:mihajlo.stevanovi@ens-paris-saclay.fr).
