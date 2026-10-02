@@ -14,6 +14,6 @@ I fine-tuned **Wan2.1-T2V-1.3B** (via [minWM](https://github.com/shengshu-ai/min
 
 **Results on 256 held-out scenes:**
 
-- **99.6%** relative direction accuracy: from the same scene and noise, commanding "right" puts the gripper to the right of where "left" puts it.
+- **84.8%** direction accuracy: in 84.8% of cases the gripper moves in the direction it was commanded.
 - The action signal alone is worth **+5.29 dB PSNR** (real action vs. a learned null action). A deliberately wrong action scores below the null one, so the model really uses the action.
 - Fine-tuning does not undo DMD distillation: 4-step sampling keeps the same direction accuracy as 24 steps.

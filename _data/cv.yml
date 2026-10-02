@@ -52,7 +52,7 @@ cv:
         start_date: 2026-08
         end_date: 2026-08
         highlights:
-          - "Action-conditioned video world model: LoRA fine-tuning of Wan2.1 on BAIR robot pushing; 99.6% direction accuracy on 256 held-out scenes."
+          - "Action-conditioned video world model: LoRA fine-tuning of Wan2.1 on BAIR robot pushing; 84.8% direction accuracy on 256 held-out scenes."
 
       - company: ETF Robotics Laboratory, University of Belgrade
         position: Robotics Research Intern
@@ -62,7 +62,7 @@ cv:
         highlights:
           - "IL/RL policies for cable insertion in Isaac Lab for the AI for Industry Challenge (Intrinsic & Open Robotics)."
           - "OpenUSD scenes and a containerized ROS 2 / Gazebo sim-to-real environment."
-          - "BSc thesis: 30,290 demos, ACT vs. Diffusion Policy data-scaling study (3.5× lower lateral error; contact phase is the bottleneck)."
+          - "BSc thesis: 30,290 demos, ACT vs. Diffusion Policy data-scaling study (lateral error is the main obstacle; 3.5× lower with more data: 41.2 → 11.8 mm)."
 
       - company: School of Electrical Engineering, University of Belgrade
         position: Teaching Assistant (lab sessions, 4 undergraduate courses)

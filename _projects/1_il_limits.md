@@ -17,7 +17,7 @@ How far can imitation learning go on a task that needs millimetre precision? I s
 - Trained **ACT** and **Diffusion Policy** (LeRobot) with an auxiliary phase-prediction head, at 1k, 10k and 30k demonstrations.
 - Evaluated closed-loop over 150 episodes per policy, with automatic failure classification.
 
-**Findings.** More data mainly improved alignment: Diffusion Policy's median lateral error dropped **3.5×** (41.2 → 11.8 mm). But the median closest approach to the port **plateaued at ~47 mm for every policy and data size**. The bottleneck is the final contact phase (force-free differential IK), not model capacity or data volume.
+**Findings.** The main obstacle is **lateral error**, the sideways misalignment with the port. More data helps a lot: Diffusion Policy's median lateral error dropped **3.5×** (41.2 → 11.8 mm), but that is still far from the millimetre precision the insertion requires.
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-10 mt-3 mt-md-0">

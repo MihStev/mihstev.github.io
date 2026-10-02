@@ -30,8 +30,8 @@ latest_posts:
 <ul class="highlights">
   <li><span class="label">Now</span><span>MSc <a href="https://www.master-mva.com/">MVA</a>, ENS Paris-Saclay · French Government Scholar (BGF)</span></li>
   <li><span class="label">Research</span><span>IL/RL policies for cable insertion in the <a href="{{ '/projects/2_aic/' | relative_url }}">Intrinsic AI for Industry Challenge</a>, ETF Robotics Lab</span></li>
-  <li><span class="label">Thesis</span><span><a href="{{ '/projects/1_il_limits/' | relative_url }}">ACT vs. Diffusion Policy on 30k demos</a>: more data cuts alignment error 3.5×, but not the contact-phase gap</span></li>
-  <li><span class="label">World models</span><span><a href="{{ '/projects/3_world_model/' | relative_url }}">Action-conditioned video diffusion</a> on BAIR robot data: 99.6% direction accuracy</span></li>
+  <li><span class="label">Thesis</span><span><a href="{{ '/projects/1_il_limits/' | relative_url }}">ACT vs. Diffusion Policy on 30k demos</a>: lateral error is the main obstacle; more data cut it 3.5× (41.2 → 11.8 mm)</span></li>
+  <li><span class="label">World models</span><span><a href="{{ '/projects/3_world_model/' | relative_url }}">Action-conditioned video diffusion</a> on BAIR robot data: the arm moves in the commanded direction 84.8% of the time</span></li>
   <li><span class="label">Control</span><span><a href="{{ '/projects/4_juggling/' | relative_url }}">Model-based table-tennis ball juggling</a> on a Franka Panda</span></li>
   <li><span class="label">Background</span><span>BSc Electrical Engineering, University of Belgrade · GPA 9.11/10</span></li>
 </ul>

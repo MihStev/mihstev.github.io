@@ -27,14 +27,14 @@ At the [ETF Robotics Laboratory](https://robot.etf.bg.ac.rs/en-gb/team/) (adviso
 
 My BSc thesis asked a simple question: how far can imitation learning go on a task that needs millimetre precision? I generated 30,290 expert demonstrations and trained ACT and Diffusion Policy at 1k, 10k and 30k demos.
 
-- More data clearly helps **alignment**: Diffusion Policy's median lateral error dropped **3.5×** (41.2 → 11.8 mm).
-- But every policy, at every data size, **stalled at ~47 mm from the port**. The bottleneck is the contact phase, not model capacity or data volume.
+- The main obstacle is **lateral error**: the sideways misalignment with the port.
+- More data helps a lot: Diffusion Policy's median lateral error dropped **3.5×** (41.2 → 11.8 mm), but that is still far from the millimetre precision the insertion requires.
 
 <a class="more-link" href="{{ '/projects/1_il_limits/' | relative_url }}">Project page →</a>
 
 ## A model that imagines the effect of actions
 
-At PSIML 2026 I approached the problem from another side: instead of a policy, a **world model**. I fine-tuned a pretrained video diffusion model (Wan2.1, 1.3B) with LoRA so that it follows commanded robot actions on the BAIR dataset. On 256 held-out scenes it moves the arm in the commanded direction 99.6% of the time, and the action signal alone is worth +5.29 dB PSNR.
+At PSIML 2026 I approached the problem from another side: instead of a policy, a **world model**. I fine-tuned a pretrained video diffusion model (Wan2.1, 1.3B) with LoRA so that it follows commanded robot actions on the BAIR dataset. On 256 held-out scenes it moves the arm in the commanded direction 84.8% of the time, and the action signal alone is worth +5.29 dB PSNR.
 
 <a class="more-link" href="{{ '/projects/3_world_model/' | relative_url }}">Project page →</a>
 
@@ -48,7 +48,7 @@ On the classical side, I built a model-based controller for table-tennis ball ju
 
 Two directions interest me most right now.
 
-- **RL fine-tuning of imitation-learned policies.** My thesis showed that more demonstrations improve alignment but not the contact phase, which is exactly where interaction and reward should help.
+- **RL fine-tuning of imitation-learned policies.** My thesis showed that more demonstrations reduce lateral error, but not enough for insertion; that last stretch is exactly where interaction and reward should help.
 - **World models for planning.** At PSIML I saw that a video model can learn to respect robot actions. The next step is to use such a model to imagine outcomes and plan before acting.
 
 I'm looking for a **research internship starting in spring 2027** to work on these questions. Feel free to [reach out](mailto:mihastevanovic04@gmail.com).
