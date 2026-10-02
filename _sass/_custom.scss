@@ -442,3 +442,9 @@ footer.fixed-bottom {
     color: var(--accent) !important;
   }
 }
+
+// Whole project cards and category headers are links: no text underline there
+.projects a,
+.projects a * {
+  text-decoration: none !important;
+}
