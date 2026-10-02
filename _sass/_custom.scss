@@ -1,0 +1,444 @@
+// ---------------------------------------------------------------------------
+// Personal design layer on top of al-folio (loaded last from assets/css/main.scss)
+// Idea: "robotics lab notebook" — industrial-orange accent, blueprint dot grid,
+// monospace labels for metadata, geometric display font for headings.
+// Fonts are loaded via third_party_libraries.google_fonts in _config.yml.
+// ---------------------------------------------------------------------------
+
+:root {
+  --accent: #d9480f;
+  --accent-rgb: 217, 72, 15;
+  --grid-dot: rgba(0, 0, 0, 0.06);
+  --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Consolas, monospace;
+  --radius: 14px;
+
+  --global-theme-color: var(--accent);
+  --global-hover-color: var(--accent);
+  --global-text-color: #1b1d21;
+  --global-text-color-light: #6b7079;
+  --global-bg-color: #fbfaf8;
+  --global-card-bg-color: #ffffff;
+  --global-divider-color: rgba(0, 0, 0, 0.09);
+}
+
+html[data-theme="dark"] {
+  --accent: #ff8a4c;
+  --accent-rgb: 255, 138, 76;
+  --grid-dot: rgba(255, 255, 255, 0.05);
+
+  --global-theme-color: var(--accent);
+  --global-hover-color: var(--accent);
+  --global-text-color: #e7e5e2;
+  --global-text-color-light: #9a9ea6;
+  --global-bg-color: #121316;
+  --global-card-bg-color: #1a1c20;
+  --global-divider-color: rgba(255, 255, 255, 0.09);
+}
+
+// --- Base ------------------------------------------------------------------
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--global-bg-color);
+  background-image: radial-gradient(var(--grid-dot) 1px, transparent 1px);
+  background-size: 22px 22px;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+.post-title,
+.card-title {
+  font-family: var(--font-display);
+  letter-spacing: -0.015em;
+}
+
+article a,
+.post a {
+  text-decoration: underline;
+  text-decoration-color: rgba(var(--accent-rgb), 0.35);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.2s ease;
+
+  &:hover {
+    text-decoration-color: var(--accent);
+  }
+}
+
+::selection {
+  background: rgba(var(--accent-rgb), 0.22);
+}
+
+// --- Navbar ----------------------------------------------------------------
+
+.navbar {
+  background-color: color-mix(in srgb, var(--global-bg-color) 82%, transparent) !important;
+  backdrop-filter: saturate(160%) blur(10px);
+  -webkit-backdrop-filter: saturate(160%) blur(10px);
+  border-bottom: 1px solid var(--global-divider-color);
+  box-shadow: none !important;
+
+  .navbar-brand {
+    font-family: var(--font-display);
+  }
+
+  .nav-link {
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    letter-spacing: 0.02em;
+  }
+
+  .nav-item.active > .nav-link {
+    color: var(--accent) !important;
+    font-weight: 500;
+  }
+}
+
+// --- About: hero -----------------------------------------------------------
+
+.post-header .post-title {
+  font-size: clamp(2.3rem, 5vw, 3.3rem);
+  font-weight: 700;
+  line-height: 1.05;
+
+  .font-weight-bold {
+    font-weight: 700 !important;
+  }
+}
+
+.post-header .desc,
+.post-header p {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--global-text-color-light);
+
+  &::before {
+    content: "// ";
+    color: var(--accent);
+  }
+}
+
+// Photo with an offset accent frame
+.profile figure {
+  position: relative;
+  isolation: isolate;
+
+  img {
+    border-radius: var(--radius) !important;
+    box-shadow: none !important;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 12px -12px -12px 12px;
+    border: 2px solid var(--accent);
+    border-radius: var(--radius);
+    z-index: -1;
+  }
+}
+
+.profile .more-info {
+  margin-top: 1.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--global-text-color-light);
+
+  p::before {
+    content: "\25CF  ";
+    color: var(--accent);
+  }
+}
+
+// "Open to internships" status line
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 0.25rem 0 1.1rem;
+  padding: 0.35rem 0.85rem;
+  border: 1px solid rgba(var(--accent-rgb), 0.35);
+  border-radius: 999px;
+  background: rgba(var(--accent-rgb), 0.07);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #2fb36f;
+    box-shadow: 0 0 0 0 rgba(47, 179, 111, 0.6);
+    animation: pulse 2s infinite;
+  }
+}
+
+@keyframes pulse {
+  70% {
+    box-shadow: 0 0 0 8px rgba(47, 179, 111, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(47, 179, 111, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .status-pill .dot {
+    animation: none;
+  }
+}
+
+// Interest chips
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0.4rem 0 1.2rem;
+  padding: 0;
+  list-style: none;
+
+  li {
+    padding: 0.28rem 0.7rem;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 8px;
+    background: var(--global-card-bg-color);
+    font-family: var(--font-mono);
+    font-size: 0.76rem;
+    transition:
+      border-color 0.2s ease,
+      color 0.2s ease;
+
+    &:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+  }
+}
+
+// --- Section headings: "01 / news ———" -------------------------------------
+
+article {
+  counter-reset: section;
+}
+
+article > h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 2.6rem;
+
+  &::before {
+    counter-increment: section;
+    content: "0" counter(section);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--accent);
+  }
+
+  &::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--global-divider-color);
+  }
+
+  a {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    text-decoration: none !important;
+    color: var(--global-text-color) !important;
+  }
+}
+
+// --- News as a timeline ----------------------------------------------------
+
+.news {
+  table {
+    background: transparent !important;
+  }
+
+  tr > :first-child {
+    width: 8.5rem;
+    white-space: nowrap;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 400 !important;
+    color: var(--global-text-color-light);
+    padding-top: 0.7rem;
+  }
+
+  tr > td {
+    position: relative;
+    padding: 0.55rem 0 0.9rem 1.4rem;
+    border-left: 1px solid var(--global-divider-color);
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -5px;
+      top: 0.95rem;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--global-bg-color);
+      border: 2px solid var(--accent);
+    }
+  }
+}
+
+// --- Publications ----------------------------------------------------------
+
+.publications {
+  ol.bibliography li {
+    padding: 1.1rem 1.1rem 0.6rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--global-divider-color);
+    border-radius: var(--radius);
+    background: var(--global-card-bg-color);
+  }
+
+  .badge {
+    background: var(--accent) !important;
+    color: #fff !important;
+    font-family: var(--font-mono);
+    font-weight: 500 !important;
+    letter-spacing: 0.06em;
+    border-radius: 6px;
+  }
+
+  .title {
+    font-family: var(--font-display);
+    font-weight: 600;
+  }
+
+  .links a.btn {
+    font-family: var(--font-mono);
+    border-radius: 6px;
+  }
+}
+
+// --- Project cards ---------------------------------------------------------
+
+.projects {
+  h2.category {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--accent);
+    text-align: left;
+    border-bottom: 1px solid var(--global-divider-color);
+    padding-bottom: 0.5rem;
+    margin-top: 2rem;
+  }
+
+  .card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--global-divider-color) !important;
+    border-radius: var(--radius) !important;
+    background: var(--global-card-bg-color);
+    box-shadow: none !important;
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease,
+      border-color 0.25s ease;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 3px;
+      background: var(--accent);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover {
+      transform: translateY(-4px);
+      border-color: rgba(var(--accent-rgb), 0.45) !important;
+      box-shadow: 0 14px 30px -18px rgba(0, 0, 0, 0.45) !important;
+
+      &::before {
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  .card-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  .card-text {
+    font-family: var(--font-mono);
+    font-size: 0.74rem;
+    color: var(--global-text-color-light);
+  }
+}
+
+// --- Social icons ----------------------------------------------------------
+
+.social .contact-icons a {
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+
+  &:hover {
+    color: var(--accent);
+    transform: translateY(-2px);
+  }
+}
+
+.social .contact-note {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+}
+
+// --- Small fixes -------------------------------------------------------------
+
+strong,
+b {
+  font-weight: 600 !important;
+  color: var(--global-text-color);
+}
+
+// The news table ships with .table-dark/.table-light; keep text on our palette
+.news table,
+.news th,
+.news td {
+  color: var(--global-text-color) !important;
+  background: transparent !important;
+}
+
+.news th {
+  color: var(--global-text-color-light) !important;
+}
+
+footer.fixed-bottom {
+  background: color-mix(in srgb, var(--global-bg-color) 88%, transparent) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-top: 1px solid var(--global-divider-color);
+
+  &,
+  * {
+    color: var(--global-text-color-light) !important;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+  }
+
+  a:hover {
+    color: var(--accent) !important;
+  }
+}

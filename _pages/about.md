@@ -29,6 +29,6 @@ I work on **robot learning**. At the [ETF Robotics Laboratory](https://robot.etf
 
 I have also worked on model-based control (table-tennis ball juggling with a Franka Panda) and on world models (an action-conditioned video diffusion model for robot manipulation, built at [PSIML](https://psiml.pfe.rs/)).
 
-**Interests:** imitation and reinforcement learning · world models · contact-rich and dynamic manipulation · trajectory optimization and model-based control · sim-to-real transfer.
+<ul class="chips"><li>imitation learning</li><li>reinforcement learning</li><li>world models</li><li>contact-rich manipulation</li><li>dynamic manipulation</li><li>trajectory optimization</li><li>model-based control</li><li>sim-to-real</li></ul>
 
-I'm looking for a **research internship starting in spring 2027**. Feel free to [reach out](mailto:mihajlo.stevanovi@ens-paris-saclay.fr).
+<div class="status-pill"><span class="dot"></span>Open to research internships · spring 2027 · <a href="mailto:mihajlo.stevanovi@ens-paris-saclay.fr">get in touch</a></div>
