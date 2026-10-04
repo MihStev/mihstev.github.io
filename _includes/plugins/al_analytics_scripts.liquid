@@ -1,0 +1,9 @@
+{% comment %}
+  Local override of the al_folio_core wrapper: keeps the built-in analytics
+  (Cloudflare, configured in _config.yml) and adds Umami Cloud, which the
+  al_analytics plugin does not support. Umami is cookieless.
+{% endcomment %}
+{% al_analytics_scripts %}
+{% if jekyll.environment == 'production' %}
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="3156fbb2-d6f7-421f-8342-fae374192e64"></script>
+{% endif %}
