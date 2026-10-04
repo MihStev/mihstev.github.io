@@ -32,7 +32,7 @@ latest_posts:
   <li><span class="label">Research</span><span>IL/RL policies for cable insertion in the <a href="{{ '/projects/2_aic/' | relative_url }}">Intrinsic AI for Industry Challenge</a>, ETF Robotics Lab</span></li>
   <li><span class="label">Thesis</span><span><a href="{{ '/projects/1_il_limits/' | relative_url }}">ACT vs. Diffusion Policy on 30k demos</a>: lateral error is the main obstacle; more data cut it 3.5× (41.2 → 11.8 mm)</span></li>
   <li><span class="label">World models</span><span><a href="{{ '/projects/3_world_model/' | relative_url }}">Action-conditioned video diffusion</a> on BAIR robot data: the arm moves in the commanded direction 84.8% of the time</span></li>
-  <li><span class="label">Control</span><span><a href="{{ '/projects/4_juggling/' | relative_url }}">Model-based table-tennis ball juggling</a> on a Franka Panda</span></li>
+  <li><span class="label">Control</span><span><a href="{{ '/projects/4_juggling/' | relative_url }}">Model-predictive control for intercepting a thrown ping-pong ball</a> with a Franka Panda (in progress)</span></li>
   <li><span class="label">Background</span><span>BSc Electrical Engineering, University of Belgrade · GPA 9.11/10</span></li>
 </ul>
 

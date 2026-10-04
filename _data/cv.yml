@@ -39,12 +39,12 @@ cv:
 
     Experience:
       - company: ETF Robotics Laboratory, University of Belgrade
-        position: Research project, robotic table-tennis ball juggling
+        position: "Research project: robotic table tennis, ball interception (in progress)"
         location: Belgrade, Serbia
         start_date: 2026-08
-        end_date: 2026-09
+        end_date: present
         highlights:
-          - "Nonlinear ball-flight and impact model used in a model-based trajectory-optimization controller for a Franka Panda; validated in Gazebo."
+          - "Gazebo setup on franka_ros (ROS 1 Noetic); MoveIt interceptor within 1–2 cm of the predicted contact point but too slow, so developing a nonlinear MPC (CasADi/IPOPT, acados)."
 
       - company: PSIML, Practical Seminar in Machine Learning
         position: Selected participant

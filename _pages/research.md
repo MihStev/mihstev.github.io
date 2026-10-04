@@ -40,7 +40,7 @@ At PSIML 2026 I approached the problem from another side: instead of a policy, a
 
 ## Model-based control
 
-On the classical side, I built a model-based controller for table-tennis ball juggling on a Franka Panda: a nonlinear model of ball flight and impact, used inside a trajectory optimizer that keeps the ball bouncing stably (validated in Gazebo).
+On the classical side, I'm working toward a Panda that plays with a ping-pong ball, starting with intercepting a thrown ball. A MoveIt baseline in Gazebo already reaches within 1–2 cm of the predicted contact point, but too slowly for the ball's flight, so I'm building a nonlinear MPC that times the paddle to the ball's arrival (in progress).
 
 <a class="more-link" href="{{ '/projects/4_juggling/' | relative_url }}">Project page →</a>
 
